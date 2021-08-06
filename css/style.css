@@ -963,7 +963,7 @@ header .container-fluid{
 .f-icon ul li a i:hover{
 	height: 100%;
 	transition: 0.8s;
-	color: #FF4646;
+	color: white;
 	transform: scale(2.5);
 	
 }
