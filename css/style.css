@@ -22,6 +22,19 @@ body, h1,h2,h3,h4,h5,h6,a,p,span,button,input,textarea{
 header{
 	width: 100%;
 	padding: 40px 0px;
+
+}
+.sticky{
+	position: fixed;
+	width: 100%;
+	padding: 0px;
+	background: rgba(192,192,192,1);
+}
+.sticky .nav-link{
+	color: #09142e !important;
+}
+header .container-fluid{
+	padding: 0px;
 }
 .h-btn{
 	background: #2500f9;
@@ -492,32 +505,474 @@ header{
  feature section css
 ****************************/
 .feature{
-	width: 100%;
-	padding: 100px 0px;
+    width: 100%;
+    padding: 60px 0px;
+    position: relative;
 }
-.feature h3{
+.fea-img{
+    position: absolute;
+    text-align: right;
+    right: 0;
+    bottom: 25px;
+}
+.feature-title{
+    text-align: left;
+    margin-bottom: 24px;
+}
+.feature-title h2{
 	font-size: 36px;
 	font-weight: 600;
 	color: #242f51;
+	margin-bottom: 16px;
 }
-.feature p{
+.feature-title p{
 	font-size: 16px;
-	color: #616368;
 	font-weight: 400;
-	margin: 24px 0px;
+	color: #616368;
+	margin-bottom: 36px;
 }
-.feature img{
-	margin-bottom: 32px;
+.fea-item{
+    width: 24%;
+    height: auto;
+    margin: 24px 12px;
+}
+.fea-item img{
+	margin-bottom: 20px;
+}
+.fea-item h4{
+    font-size: 20px;
+    font-weight: 600;
+    color: #242f51;
+    margin: 16px 0px;
+}
+.fea-item p{
+    font-size: 16px;
+    color: #616368;
+    margin: 16px 0px;
+}
+.f-btn{
+    background: #2500f9;
+    padding: 13px 50px;
+    color: white;
+    border: none;
+    border-radius: 38px;
+    margin: 13px 0px 0px 4px;
+    font-weight: 600;
+    position: relative;
+    z-index: 10;
 }
 
-.i-des h4{
-	font-size: 20px;
+.f-btn::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 50
+	height: 0%;
+	width: 100%;
+	background: white;
+	transition: 0.8s;
+	z-index: -10;
+}
+.f-btn:hover:before{
+	height: 50%;
+	transition: 0.8s;
+	border-top-right-radius: 100%;
+	border-bottom-right-radius: 100%;
+
+}
+.f-btn:hover{
+	font-weight: bold;
+	color: #221352 !important;
+	transform: scale(1.2);
+}
+
+
+/***************************
+ pricing section css
+****************************/
+.pricing{
+	width: 100%;
+	padding: 80px 0px;
+}
+
+.pricing-title h2{
+	font-size: 36px;
 	font-weight: 600;
 	color: #242f51;
-	margin-bottom: 10px;
+	text-align: center;
+	margin-bottom: 40px;
 }
-.i-des p{
+.pricing-title p{
+	font-size: 16px;
 	font-weight: 400;
+	color: #616368;
+	text-align: center;
+	margin-bottom: 80px;
+}
+
+.price-table{
+	text-align: center;
+}
+.price-controller{
+	border: 2px solid #ebebeb;
+	border-radius: 35px;
+	padding: 1px;
+	display: inline-block;
+}
+.price-btn{
+	padding: 10px 22px;
+	border: none;
+	background: transparent;
+}
+.active-t{
+	background: #2500f9;
+	color: white;
+	border-radius: 35px; 
+}
+
+.pt-table{
+	margin: 82px 0px;
+}
+.card{
+	border-radius: 8px;
+	border-color: #ebebeb;
+	border: 2px solid #ebebeb;
+
+}
+.card-header{
+	background: #f6f9fa;
+	padding: 28px;
+	border: none;
+	border-top-right-radius: 8px;
+	border-top-left-radius: 8px;
+}
+.card-header h2{
+	color: #242f51;
+	font-weight: 600;
+	font-size: 60px;
+	margin: 36px 0px 18px 0px;
+}
+.card-header h2 span{
+	color: #999ca5;
+	font-size: 18px;
+	font-weight: 400;
+}
+.card-header strong{
+	font-size: 20px;
+	color: #242f51;
+}
+.card-header p,{
+	font-size: 16px;
+	color: #999ca5;
+	font-weight: 400;
+}
+.card-body{
+	background: #fff;
+	padding-top: 30px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+}
+.card-body p{
+	font-size: 16px;
+	color: #999ca5;
+	font-weight: 500;
+}
+.buy-btn{
+    background: #2500f9;
+    padding: 11px 26px;
+    color: white;
+    border: none;
+    border-radius: 38px;
+    font-weight: 600;
+    margin: 11px 0px;
+    z-index: 9;
+}
+.buy-btn:hover{
+	color: white;
+	transform: scale(0.7);
+}
+.card-active{
+	border: none;
+	box-shadow: 2px 24px 44px 23px rgb(195 192 192 /18%);
+}
+
+.trial{
+	color: #2500f9 !important;
+	margin-top: 20px !important;
+	font-size: 16px !important;
+	font-weight: 400 !important;
+}
+.line{
+	width: 100%;
+	height: 1px;
+	background: #ebebeb;
+}
+
+/***************************
+ testiminial section css
+****************************/
+
+.testiminial{
+	width: 100%;
+	padding: 40px 0px;
+	position: relative;
+}
+.tes-img{
+	position: absolute;
+	left: 0;
+	top: 100px;
+}
+.testiminial-title h2{
+	font-size: 40px;
+	color: #242f51;
+	font-weight: 600;
+	padding-right: 93px;
+	margin-bottom: 22px;
+	text-align: left;
+
+}
+.testiminial-title p{
+	font-size: 16px;
+	font-weight: 400;
+	color: #616368;
+	padding-right: 97px;
+    margin-bottom: 22px;
+    text-align: left;
+}
+.star i{
+	color: #ffcc00 !important;
+}
+.testiminial-1 h6{
+	font-size: 20px;
+	color: #242f51;
+	font-weight: 600;
+	margin: 18px 0px;
+}
+.testiminial-1 p{
 	font-size: 16px;
 	color: #616368;
+	font-weight: 400;
+	padding-right: 56px;
+}
+
+.t-user{
+	margin-top: 54px;
+}
+.t-user h6{
+	font-size: 18px;
+	font-weight: 600;
+	color: #242f51;
+	margin: 0;
+
+}
+.t-user p{
+	font-size: 18px;
+	color: #616368;
+	margin-top: 6px;
+}
+.t-user .col-md-6{
+	padding: 16px;
+}
+
+/***************************
+ faq section css
+****************************/
+
+.faq{
+	width: 100%;
+	padding: 80px 0px;
+}
+.faq-title h2{
+	font-size: 40px;
+	color: #242f51;
+	font-weight: 600;
+	text-align: center;
+	margin-top: 70px;
+}
+.faq-title p{
+	font-size: 16px;
+	font-weight: 400;
+	color: #616368;
+	text-align: center;
+	padding: 18px 0px;
+}
+.faq-item{
+	margin-top: 30px;
+}
+.accordion-item{
+	background: #f5f7fa !important;
+	border:none;
+	padding: 16px;
+	margin-bottom: 10px;
+
+}
+.accordion-button{
+	color: #242f51 !important;
+	font-weight: 600;
+	background-color: #f5f7fa !important;
+	padding: 0px 24px;
+
+}
+.accordion-button:not(.collapsed){
+	font-size: 20px;
+	color: #242f51 !important;
+	font-weight: 600;
+	background-color: #f5f7fa !important;
+	box-shadow: none;
+	padding: 18px 24px !important;
+}
+.accordion-body p{
+	font-size: 16px;
+    font-weight: 400;
+    color: #616368;
+    padding-right: 175px;
+}
+
+.accordion-button::after{
+    background-image: url(../image/plus.png) !important;
+    
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: url(../image/minus.png) !important;
+    
+}
+
+
+/***************************
+ download section css
+****************************/
+.download{
+	width: 100%;
+	padding: 100px 0px;
+	box-shadow: inset 0px 1px 1px rgb(206 206 206);
+	position: relative;
+}
+.down-img{
+	position: absolute;
+	text-align: right;
+	right: 0;
+	bottom: -60px;
+}
+.down-title{
+	text-align: left;
+}
+
+.down-title h2{
+    font-size: 48px;
+    font-weight: 600;
+    color: #242f51;
+    margin-bottom: 24px;
+}
+.down-title p{
+    font-size: 16px;
+    color: #616368;
+    margin: 34px 0px;
+}
+.i-hb:hover{
+	transform: scale(1.2);
+	cursor: pointer;
+}
+
+/***************************
+ footer section css
+****************************/
+
+.footer{
+	width: 100%;
+	padding: 0px 0;
+	background: #09142e;
+}
+.footer h3{
+	margin-top: 120px;
+	margin-bottom: 43px;
+	text-align: center;
+	color: #fcae61;
+	font-size: 30px;
+	font-weight: 600;
+}
+.footer span{
+	color: #ffffff;
+}
+.nav-item2{
+	margin-left: 22px;
+}
+.nav-link2{
+	color: white !important;
+	font-size: 16px;
+	font-weight: 300;
+	z-index: 9;
+	position: relative;
+}
+
+.nav-link2:hover{
+	font-weight: bold;
+	color: white !important;
+}
+.nav-link2::before{
+	content: '';
+	position: absolute;
+	height: 50%;
+	width: 0%;
+	bottom: 0;
+	left: 0;
+	background: #716F81;
+	transition: 0.4s;
+	z-index: -9;
+	
+}
+.nav-link2:hover:before{
+	width: 100%;
+	transition: 0.4s;
+	
+}
+.nav-link2::after{
+	content: '';
+	position: absolute;
+	height: 50%;
+	width: 0%;
+	top: 0;
+	right: 0;
+	background: #716F81;
+	transition: 0.4s;
+	z-index: -9;
+	
+}
+.nav-link2:hover:after{
+	width: 100%;
+	transition: 0.4s;
+	
+}
+
+.f-icon{
+	text-align: center;
+}
+
+.f-icon ul li{
+	list-style: none;
+	display: inline-block;
+	margin: 10px 25px 0px 0px;
+}
+.f-icon ul li a i{
+	color: #273043;
+	font-size: 24px;
+	transition: 0.8s;
+	margin: 31px 0px 45px 0px;
+}
+
+.f-icon ul li a i:hover{
+	height: 100%;
+	transition: 0.8s;
+	color: #FF4646;
+	transform: scale(2.5);
+	
+}
+.f-line{
+	text-align: center;
+	font-size: 14px;
+	font-weight: 300;
+	color: white;
+	margin-top: 17px;
+	margin-bottom: 110px;
+	text-align: center;
 }
